@@ -30,22 +30,6 @@ class _HomeScreenState extends State<HomeScreen> {
     return Scaffold(
       body: Consumer<ShowProvider>(
         builder: (context, showProvider, child) {
-          // if (showProvider.loading) {
-          //   return Container(
-          //     color: Colors.black, 
-          //     child: Center(
-          //       child: Platform.isIOS
-          //           ? const CupertinoActivityIndicator(
-          //               animating: true,
-          //               color: Colors.white,
-          //             )
-          //           : const CircularProgressIndicator(
-          //               valueColor: AlwaysStoppedAnimation<Color>(Colors.white),
-          //             ), //
-          //     ),
-          //   );
-          // }
-
           return Container(
             decoration: BoxDecoration(
               gradient: showProvider.loading
