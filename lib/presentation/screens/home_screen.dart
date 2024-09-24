@@ -1,10 +1,10 @@
-import 'dart:io';
-
+// import 'dart:io';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:quadb/presentation/widgets/show_tile.dart';
 import 'package:quadb/presentation/widgets/top_show_tile.dart';
+// import 'package:quadb/provider/auth_provider.dart';
 
 import '../../provider/show_provider.dart';
 import '../../services/show_service.dart';
@@ -30,22 +30,21 @@ class _HomeScreenState extends State<HomeScreen> {
     return Scaffold(
       body: Consumer<ShowProvider>(
         builder: (context, showProvider, child) {
-         
-          if (showProvider.loading) {
-            return Container(
-              color: Colors.black, 
-              child: Center(
-                child: Platform.isIOS
-                    ? const CupertinoActivityIndicator(
-                        animating: true,
-                        color: Colors.white,
-                      )
-                    : const CircularProgressIndicator(
-                        valueColor: AlwaysStoppedAnimation<Color>(Colors.white),
-                      ), //
-              ),
-            );
-          }
+          // if (showProvider.loading) {
+          //   return Container(
+          //     color: Colors.black, 
+          //     child: Center(
+          //       child: Platform.isIOS
+          //           ? const CupertinoActivityIndicator(
+          //               animating: true,
+          //               color: Colors.white,
+          //             )
+          //           : const CircularProgressIndicator(
+          //               valueColor: AlwaysStoppedAnimation<Color>(Colors.white),
+          //             ), //
+          //     ),
+          //   );
+          // }
 
           return Container(
             decoration: BoxDecoration(

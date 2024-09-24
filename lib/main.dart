@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:quadb/firebase_options.dart';
-import 'package:quadb/presentation/screens/auth_screen.dart';
+import 'package:quadb/presentation/screens/splash_screen.dart';
 import 'package:quadb/provider/auth_provider.dart';
 import 'package:quadb/provider/show_provider.dart';
 
@@ -35,7 +35,7 @@ class MyApp extends StatelessWidget {
           colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
           useMaterial3: true,
         ),
-        home: const AuthScreen(),
+        home: const SplashScreen(),
       ),
     );
   }
