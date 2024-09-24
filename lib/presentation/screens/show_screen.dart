@@ -19,7 +19,7 @@ class _ShowScreenState extends State<ShowScreen> {
   void extractDominantColor() async {
     PaletteGenerator paletteGenerator =
         await PaletteGenerator.fromImageProvider(
-      NetworkImage(widget.show.image ?? ''),
+      NetworkImage(widget.show.image ?? "", scale: 1),
     );
 
     setState(() {
@@ -29,13 +29,10 @@ class _ShowScreenState extends State<ShowScreen> {
 
   String cleanSummary(String rawSummary) {
     String cleanedSummary = rawSummary.replaceAll(RegExp(r'<\/?p>'), '');
-
     cleanedSummary = cleanedSummary.replaceAllMapped(
       RegExp(r'<b>(.*?)<\/b>'),
-      (match) =>
-          '**${match.group(1)}**', 
+      (match) => '**${match.group(1)}**',
     );
-
     return cleanedSummary;
   }
 
@@ -47,13 +44,19 @@ class _ShowScreenState extends State<ShowScreen> {
 
   @override
   Widget build(BuildContext context) {
+    // Get the height and width of the screen
+    final screenHeight = MediaQuery.of(context).size.height;
+    final topPadding = MediaQuery.of(context).padding.top; 
+    final bottomPadding = MediaQuery.of(context).padding.bottom; 
+
     return Scaffold(
       body: Container(
+        height: screenHeight, 
         decoration: BoxDecoration(
           gradient: LinearGradient(
             colors: [
-              dominantColor.withOpacity(0.6), 
-              Colors.black, 
+              dominantColor.withOpacity(0.6),
+              Colors.black,
             ],
             begin: Alignment.topCenter,
             end: Alignment.bottomCenter,
@@ -64,11 +67,11 @@ class _ShowScreenState extends State<ShowScreen> {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Container(
-                height: MediaQuery.of(context).padding.top,
+                height: topPadding, 
                 color: dominantColor,
               ),
               Container(
-                height: MediaQuery.of(context).size.height * 0.7,
+                height: screenHeight * 0.7 - topPadding, 
                 decoration: BoxDecoration(
                   image: DecorationImage(
                     image: NetworkImage(
@@ -78,13 +81,11 @@ class _ShowScreenState extends State<ShowScreen> {
                 ),
                 child: Stack(
                   children: [
-
                     Container(
                       decoration: BoxDecoration(
                         gradient: LinearGradient(
                           colors: [
-                            Colors.black.withOpacity(
-                                0.5), 
+                            Colors.black.withOpacity(0.5),
                             Colors.transparent,
                           ],
                           begin: Alignment.bottomCenter,
@@ -99,17 +100,16 @@ class _ShowScreenState extends State<ShowScreen> {
                         padding: EdgeInsets.zero,
                         icon: const Icon(
                           Icons.chevron_left,
-                          color: Colors.white, 
-                          size: 30, 
+                          color: Colors.white,
+                          size: 30,
                         ),
                         onPressed: () {
-                          Navigator.pop(context); 
+                          Navigator.pop(context);
                         },
                       ),
                     ),
-                    
                     Positioned(
-                      bottom: 16, 
+                      bottom: 16,
                       left: 16,
                       right: 16,
                       child: Column(
@@ -123,19 +123,15 @@ class _ShowScreenState extends State<ShowScreen> {
                               fontWeight: FontWeight.bold,
                             ),
                           ),
-                          const SizedBox(
-                              height: 8), 
+                          const SizedBox(height: 8),
                           Row(
                             children: [
                               Expanded(
                                 child: ElevatedButton(
-                                  onPressed: () {
-
-                                  },
+                                  onPressed: () {},
                                   style: ElevatedButton.styleFrom(
                                     shape: RoundedRectangleBorder(
-                                      borderRadius: BorderRadius.circular(
-                                          4), // Rounded corners
+                                      borderRadius: BorderRadius.circular(4),
                                     ),
                                     backgroundColor: primaryRed,
                                     padding: const EdgeInsets.symmetric(
@@ -144,13 +140,11 @@ class _ShowScreenState extends State<ShowScreen> {
                                   ),
                                   child: const Row(
                                     mainAxisSize: MainAxisSize.min,
-                                    mainAxisAlignment: MainAxisAlignment
-                                        .center, 
+                                    mainAxisAlignment: MainAxisAlignment.center,
                                     children: [
                                       Icon(Icons.play_arrow,
-                                          color: Colors.white), 
-                                      SizedBox(
-                                          width: 4), 
+                                          color: Colors.white),
+                                      SizedBox(width: 4),
                                       Text(
                                         'Play',
                                         style: TextStyle(color: Colors.white),
@@ -165,28 +159,23 @@ class _ShowScreenState extends State<ShowScreen> {
                             children: [
                               Expanded(
                                 child: ElevatedButton(
-                                  onPressed: () {
-                                  },
+                                  onPressed: () {},
                                   style: ElevatedButton.styleFrom(
                                     shape: RoundedRectangleBorder(
-                                      borderRadius: BorderRadius.circular(
-                                          4), 
+                                      borderRadius: BorderRadius.circular(4),
                                     ),
                                     backgroundColor: Colors.white,
                                     padding: const EdgeInsets.symmetric(
-                                      vertical: 8, 
+                                      vertical: 8,
                                     ),
                                   ),
                                   child: const Row(
                                     mainAxisSize: MainAxisSize.min,
-                                    mainAxisAlignment: MainAxisAlignment
-                                        .center,
+                                    mainAxisAlignment: MainAxisAlignment.center,
                                     children: [
                                       Icon(Icons.download,
                                           color: Colors.black),
-                                      SizedBox(
-                                          width:
-                                              4), 
+                                      SizedBox(width: 4),
                                       Text(
                                         'Download',
                                         style: TextStyle(color: Colors.black),
@@ -203,10 +192,8 @@ class _ShowScreenState extends State<ShowScreen> {
                   ],
                 ),
               ),
-
               Padding(
-                padding: const EdgeInsets.symmetric(
-                    horizontal: 16.0, vertical: 16.0),
+                padding: const EdgeInsets.symmetric(horizontal: 16.0, vertical: 16.0),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
@@ -234,7 +221,7 @@ class _ShowScreenState extends State<ShowScreen> {
                           style: TextStyle(color: Colors.white, fontSize: 16),
                         ),
                         Text(
-                          'IMDb ${widget.show.rating}', 
+                          'IMDb ${widget.show.rating}',
                           style: const TextStyle(
                               color: Colors.white, fontSize: 16),
                         ),
@@ -250,11 +237,11 @@ class _ShowScreenState extends State<ShowScreen> {
                     const SizedBox(height: 16),
                     Text(
                       cleanSummary(widget.show.summary ??
-                          'No summary available'), 
+                          'No summary available'),
                       style: const TextStyle(color: Colors.white, fontSize: 16),
                     ),
                     SizedBox(
-                      height: MediaQuery.of(context).padding.bottom,
+                      height: bottomPadding,
                     )
                   ],
                 ),
@@ -266,4 +253,3 @@ class _ShowScreenState extends State<ShowScreen> {
     );
   }
 }
-

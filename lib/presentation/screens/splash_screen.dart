@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';
 import 'package:provider/provider.dart';
 import 'package:quadb/presentation/screens/auth_screen.dart';
-import 'package:quadb/presentation/screens/home_screen.dart';
+import 'package:quadb/presentation/screens/skeleton_screen.dart';
 import 'package:quadb/provider/auth_provider.dart';
 
 class SplashScreen extends StatelessWidget {
@@ -17,7 +17,7 @@ class SplashScreen extends StatelessWidget {
         Future.delayed(const Duration(milliseconds: 1500), () {
           if (authProvider.isSignedIn) {
             Navigator.of(context).pushReplacement(
-              MaterialPageRoute(builder: (context) => const HomeScreen()),
+              MaterialPageRoute(builder: (context) => const SkeletonScreen()),
             );
           } else {
             Navigator.of(context).pushReplacement(
