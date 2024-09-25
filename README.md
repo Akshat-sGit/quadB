@@ -30,7 +30,7 @@ password - 123456
 
 ### Splash Screen
 
-![Simulator Screenshot - iPhone 15 Pro - 2024-09-25 at 17 02 32](https://github.com/user-attachments/assets/fc7be05c-187e-449e-a03d-f11d8a9084bc)
+<img src="https://github.com/user-attachments/assets/fc7be05c-187e-449e-a03d-f11d8a9084bc" width="300">
 
 ### Home Screen 
 
