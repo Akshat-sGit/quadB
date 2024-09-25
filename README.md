@@ -34,15 +34,16 @@ password - 123456
 
 ### Home Screen 
 
-![Simulator Screenshot - iPhone 15 Pro - 2024-09-25 at 17 02 27](https://github.com/user-attachments/assets/897e42cd-70f5-4e07-8369-83967c5b2dbd)
+<img src="https://github.com/user-attachments/assets/897e42cd-70f5-4e07-8369-83967c5b2dbd" width="300">
 
 ### Search Screen 
 
-![Simulator Screenshot - iPhone 15 Pro - 2024-09-25 at 17 02 50](https://github.com/user-attachments/assets/1f6f08a5-ff09-449e-b17f-96a688482527)
+<img src="https://github.com/user-attachments/assets/1f6f08a5-ff09-449e-b17f-96a688482527" width="300">
 
 ### Details Screen 
 
-![Simulator Screenshot - iPhone 15 Pro - 2024-09-25 at 17 02 56](https://github.com/user-attachments/assets/eb630b3c-dbe5-4963-9bcf-8b2e56d6b0fe)
+<img src="https://github.com/user-attachments/assets/eb630b3c-dbe5-4963-9bcf-8b2e56d6b0fe" width="300">
+
 
 
 
