@@ -25,3 +25,24 @@
 
 Email - test@t.com
 password - 123456
+
+## Screenshots
+
+### Splash Screen
+
+![Simulator Screenshot - iPhone 15 Pro - 2024-09-25 at 17 02 32](https://github.com/user-attachments/assets/fc7be05c-187e-449e-a03d-f11d8a9084bc)
+
+### Home Screen 
+
+![Simulator Screenshot - iPhone 15 Pro - 2024-09-25 at 17 02 27](https://github.com/user-attachments/assets/897e42cd-70f5-4e07-8369-83967c5b2dbd)
+
+### Search Screen 
+
+![Simulator Screenshot - iPhone 15 Pro - 2024-09-25 at 17 02 50](https://github.com/user-attachments/assets/1f6f08a5-ff09-449e-b17f-96a688482527)
+
+### Details Screen 
+
+![Simulator Screenshot - iPhone 15 Pro - 2024-09-25 at 17 02 56](https://github.com/user-attachments/assets/eb630b3c-dbe5-4963-9bcf-8b2e56d6b0fe)
+
+
+
