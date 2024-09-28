@@ -9,9 +9,9 @@
 
 1. Installation 
 
-```https://github.com/Akshat-sGit/Weather.git```
+```https://github.com/Akshat-sGit/quadB.git```
 
-```cd Weather``` 
+```cd quadB``` 
 
 2. Install Dependencies 
 
