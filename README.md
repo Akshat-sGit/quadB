@@ -1,4 +1,4 @@
-# quadb
+# Streamplay
 
 ## Prerequisites
 1. Flutter SDK
